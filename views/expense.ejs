@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AkashGupta</title>
+ <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+  	#main_content{
+  		margin: 80px;
+  	}
+  </style>
+
+  <script>
+  $( function() {
+    $( "#datepicker_start_date" ).datepicker();
+    $( "#anim" ).on( "change", function() {
+      $( "#datepicker_start_date" ).datepicker( "option", "showAnim","slideDown" );
+    });
+    $( "#datepicker_end_date" ).datepicker();
+     $( "#anim" ).on( "change", function() {
+      $( "#datepicker_end_date" ).datepicker( "option", "showAnim","slideDown" );
+    });
+  } );
+  </script>
+</head>
+<body>
+	<nav class="navbar navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+				
+			<div class="collapse navbar-collapse" id="bs-nav-demo">
+							<ul class="nav navbar-nav">
+									<li><a href="#">XpenseTracker</a></li>
+								
+	       				    </ul>
+	       				 <ul class="nav navbar-nav navbar-right">
+	                                <li><a href="#">
+	          <span class="glyphicon glyphicon-home"></span> Home
+	        </a></a></li>
+	                                <li><a href="#">Contact</a></li>
+	                                <li><a href="#">Login</a></li>
+	         					    <li><a href="#">Sign-up</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+	 		</div>
+	 	</div>
+	<div class="row" id="main_content">
+		<div class="container">
+				<div class="row">
+					<div class="col">
+						<p>Date: <input type="text" id="datepicker_start_date" size="30"></p>
+ 
+		            	
+		            	catorgery dropdown
+
+                       
+                       credit radio button
+
+
+					</div>
+					<div class="col">
+						<p>Date: <input type="text" id="datepicker_end_date" size="30"></p>
+ 
+
+						input product name
+
+						debit radio buttom
+					</div>
+				</div>
+		    </div>
+	</div>
+    
+    <div class="row">
+	    <div class="container">
+	    <table>
+	    	<thead>
+	    	<tr>
+	    	<td>Sr.no</td>
+	    	<td>Categories</td>
+	    	<td>Amount</td>
+	    	<td>Product No</td>
+	    	<td>Taxes</td>
+	    	<td>Net Total</td>
+
+	    	</tr>
+	    		
+	    	</thead>
+	    	<tbody>
+	    		
+	    	</tbody>
+            <tfoot>
+            	
+            </tfoot>
+
+
+	    </table>
+	    </div>
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<%include header%>
+<div class="container">
+	<div class="row l12">
+	         <div class="col l6">
+
+							<div class="input-field">
+							                    <input type="text" class="datepicker" id="date" n>
+							                    <label for="date">Date</label>
+				            </div>
+							<div class="input-field col s12">
+							    <select id="cat">
+							      <option value="" disabled selected>Choose your option</option>
+							      <option value="1">Option 1</option>
+							      <option value="2">Option 2</option>
+							      <option value="3">Option 3</option>
+							    </select>
+							    <label>Materialize Select</label>
+							</div>
+	        </div>
+			<div class="col l6">
+						         <div >
+								      <input type="text" id="product"  placeholder="Product name">
+								</div>
+				
+			</div>
+	</div>		
+	<div class="row">
+				<table>
+					<thead>
+						<tr>
+			              <th>Sr No</th>
+			              <th>Category</th>
+			              <th>Product Name</th>
+			              <th>Amount</th>
+			              <th>Tax</th>
+			              <th>Net Total</th>
+	                 </tr>
+					</thead>
+					<tbody>
+						
+					</tbody>
+					<tfoot>
+						
+					</tfoot>
+				</table>
+	</div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+          
+<script>
+$(document).ready(function (){
+ $('.datepicker').pickadate();
+    $('select').material_select();
+
+$('product').change(function() {
+	 $('select').material_select();
+	 $('cat').val();
+	 $('product').val();
+	 $('date').val();
+    
+     var body={
+     	cat:cat,
+     	product:product,
+     	date:date,
+
+     }
+
+     $.ajax({
+ 	url:"/getData",
+ 	method:'post',
+ 	data:body,
+ 	// dataType:json,
+    success:function(result){
+    	console.log(result);
+     }
+    });
+
+});
+});
+</script>
+</body>
+
+</html>
